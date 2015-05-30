@@ -6,7 +6,8 @@
   <string name="spotify">SPOTIFY STREAMER</string>
   <string name="scoreapp">SCORES APP</string>
   <string name="libraryapp">SCORES APP</string>
-  <string name="buildbigger">BUILD IT </string>
+  <string name="buildbigger">BUILD IT BIGGER</string>
   <string name="xyzreader">XYZ READER</string>
   <string name="ownapp">CAPSTONE:MY OWN APP</string>
+  <string name="toast_text">"This button will launch "</string>
 </resources>

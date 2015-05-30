@@ -12,12 +12,13 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Portfolio</string>
-    <string name="buildbigger">BUILD IT </string>
+    <string name="buildbigger">BUILD IT BIGGER</string>
     <string name="hello_world">My Nanodegree Apps!</string>
     <string name="libraryapp">SCORES APP</string>
     <string name="ownapp">CAPSTONE:MY OWN APP</string>
     <string name="scoreapp">SCORES APP</string>
     <string name="spotify">SPOTIFY STREAMER</string>
+    <string name="toast_text">"This button will launch "</string>
     <string name="xyzreader">XYZ READER</string>
     <!-- From: file:/home/indexer/AndroidStudioProjects/NaNoDegree/MyApplication/app/src/main/res/values/styles.xml -->
     <eat-comment/>

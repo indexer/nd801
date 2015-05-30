@@ -8,18 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
+  private Button spotify, scoreapp, liberayapp, buildbigger, xyzreader, capstone;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    Button capstone = (Button) findViewById(R.id.capstone);
-    capstone.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View view) {
-        Toast.makeText(getApplicationContext(), "This button will launch my capstone app!",
-            Toast.LENGTH_LONG).show();
-      }
-    });
+    capstone = (Button) findViewById(R.id.capstone);
+    spotify = (Button) findViewById(R.id.spotifysteamer);
+    scoreapp = (Button) findViewById(R.id.scoresapp);
+    liberayapp = (Button) findViewById(R.id.liberayapp);
+    xyzreader = (Button) findViewById(R.id.xyzreader);
+    buildbigger = (Button) findViewById(R.id.buildbigger);
+    handleClcik(capstone, spotify, scoreapp, liberayapp, xyzreader, buildbigger);
+  }
+
+  protected void handleClcik(Button... buttons) {
+    for (Button button : buttons) {
+      button.setOnClickListener(this);
+    }
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
@@ -40,5 +47,13 @@ public class MainActivity extends Activity {
     }
 
     return super.onOptionsItemSelected(item);
+  }
+
+  @Override public void onClick(View view) {
+    if (view instanceof Button) {
+      Toast.makeText(view.getContext(),
+          getResources().getString(R.string.toast_text)+((Button) view).getText(),
+          Toast.LENGTH_LONG).show();
+    }
   }
 }
