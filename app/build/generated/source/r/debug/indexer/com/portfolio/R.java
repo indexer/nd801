@@ -17,9 +17,11 @@ public final class R {
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f060000;
         public static final int activity_vertical_margin=0x7f060001;
+        public static final int button_padding=0x7f060002;
     }
     public static final class drawable {
-        public static final int capstone=0x7f020000;
+        public static final int button_selector=0x7f020000;
+        public static final int textcolor=0x7f020001;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0007;

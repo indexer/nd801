@@ -8,7 +8,8 @@
     <color android:color="@color/red"></color>
   </item>
   <item>
-    <color android:color="@color/orange" />
+    <color android:color="@color/orange"/>
   </item>
 </selector>
 
+<!-- From: file:/home/indexer/AndroidStudioProjects/NaNoDegree/MyApplication/app/src/main/res/drawable/button_selector.xml -->

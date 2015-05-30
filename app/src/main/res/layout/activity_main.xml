@@ -19,8 +19,9 @@
       />
 
   <Button
+      android:textColor="@drawable/textcolor"
       android:padding="@dimen/button_padding"
-      android:background="@color/orange"
+      android:background="@drawable/button_selector"
       android:layout_marginTop="10dp"
       style="?android:attr/borderlessButtonStyle"
       android:layout_width="wrap_content"
@@ -32,8 +33,9 @@
       android:layout_alignStart="@+id/capstone"
       />
   <Button
+      android:textColor="@drawable/textcolor"
       android:padding="@dimen/button_padding"
-      android:background="@color/orange"
+      android:background="@drawable/button_selector"
       android:layout_marginTop="5dp"
       style="?android:attr/borderlessButtonStyle"
       android:layout_width="wrap_content"
@@ -45,8 +47,9 @@
       android:layout_alignEnd="@+id/spotifysteamer"
       />
   <Button
+      android:background="@drawable/button_selector"
+      android:textColor="@drawable/textcolor"
       android:padding="@dimen/button_padding"
-      android:background="@color/orange"
       android:layout_marginTop="5dp"
       style="?android:attr/borderlessButtonStyle"
       android:layout_width="wrap_content"
@@ -59,8 +62,9 @@
       />
 
   <Button
+      android:background="@drawable/button_selector"
+      android:textColor="@drawable/textcolor"
       android:padding="@dimen/button_padding"
-      android:background="@color/orange"
       android:layout_marginTop="5dp"
       style="?android:attr/borderlessButtonStyle"
       android:layout_width="wrap_content"
@@ -73,8 +77,9 @@
       />
 
   <Button
+      android:textColor="@drawable/textcolor"
       android:padding="@dimen/button_padding"
-      android:background="@drawable/capstone"
+      android:background="@drawable/button_selector"
       android:layout_marginTop="5dp"
       style="?android:attr/borderlessButtonStyle"
       android:layout_width="wrap_content"
@@ -87,8 +92,9 @@
       />
 
   <Button
+      android:textColor="@drawable/textcolor"
       android:padding="@dimen/button_padding"
-      android:background="@drawable/capstone"
+      android:background="@drawable/button_selector"
       android:layout_marginTop="5dp"
       style="?android:attr/borderlessButtonStyle"
       android:layout_width="wrap_content"
