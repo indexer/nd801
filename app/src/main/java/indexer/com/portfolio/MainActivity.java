@@ -1,12 +1,20 @@
 package indexer.com.portfolio;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import kaaes.spotify.webapi.android.SpotifyApi;
+import kaaes.spotify.webapi.android.SpotifyService;
+import kaaes.spotify.webapi.android.models.Album;
+import kaaes.spotify.webapi.android.models.Pager;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 public class MainActivity extends Activity implements View.OnClickListener {
   private Button spotify, scoreapp, liberayapp, buildbigger, xyzreader, capstone;
@@ -51,9 +59,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
   @Override public void onClick(View view) {
     if (view instanceof Button) {
-      Toast.makeText(view.getContext(),
-          getResources().getString(R.string.toast_text)+((Button) view).getText(),
-          Toast.LENGTH_LONG).show();
+      if (view.getId() == spotify.getId()) {
+        Intent intentToSpotify = new Intent(MainActivity.this, SpotifyActivity.class);
+        startActivity(intentToSpotify);
+      }
     }
+  }
+
+  public void getArtistAlbums() {
+    SpotifyApi api = new SpotifyApi();
+
+    // Most (but not all) of the Spotify Web API endpoints require authorisation.
+    // If you know you'll only use the ones that don't require authorisation you can skip this step
+    api.setAccessToken(getResources().getString(R.string.spotify_api));
+    SpotifyService spotify = api.getService();
+    spotify.getArtistAlbums("0TnOYISbd1XYRBk9myaseg", new Callback<Pager<Album>>() {
+      @Override public void success(Pager<Album> albumPager, Response response) {
+        Log.e("Album Pager", "" + albumPager.items.size());
+      }
+
+      @Override public void failure(RetrofitError retrofitError) {
+
+      }
+    });
   }
 }

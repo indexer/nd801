@@ -10,4 +10,6 @@
   <string name="xyzreader">XYZ READER</string>
   <string name="ownapp">CAPSTONE:MY OWN APP</string>
   <string name="toast_text">"This button will launch "</string>
+  <string name="spotify_api">BQA-HgnTTomAd0ZiVhf0CvdExM0e9TS3mEY-gZiuQ2QTRND_wxKXK0C28A_GK-GYxxCmab-Yj3DusGlkw8urDlZGS_POKhUzYrix3JO5fVSI61n-qaxGfTjXFJDcNVs6mO8rdYKIEGyJDIDc_A0-i3cTJZgOacLNAGrrhScoyrV1n8KqMKKcm_4wd_3hQy1nPXbXl1OG5C1MUTa3L_bxFp5Cvzs_f7oaLhuYt-6YhPlDP5SP9Kre9BuAYLm5TZdafETCbAPEraCLnmiyHGVzOHBzThoQHOSUq2vDrfIbRMPD</string>
+  <string name="title_activity_spotify">SpotifyActivity</string>
 </resources>
