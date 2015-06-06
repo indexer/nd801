@@ -1,7 +1,7 @@
 package indexer.com.portfolio;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -15,7 +15,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class SpotifyActivity extends Activity {
+public class SpotifyActivity extends AppCompatActivity {
   RecyclerView mRecyclerView;
   LinearLayoutManager mLayoutManager;
   ArrayList<String> artist = new ArrayList<>();
@@ -34,7 +34,6 @@ public class SpotifyActivity extends Activity {
     mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
     mRecyclerView.setLayoutManager(mLayoutManager);
     mRecyclerView.setAdapter(mArtistListAdapter);
-
     searchArtist();
   }
 
@@ -56,7 +55,11 @@ public class SpotifyActivity extends Activity {
         for (int i = 0; i < artistsPager.artists.items.size(); i++) {
           artist.add(artistsPager.artists.items.get(i).name);
         }
-        mArtistListAdapter.setArtist(artist);
+        mRecyclerView.post(new Runnable() {
+          @Override public void run() {
+            mArtistListAdapter.setArtist(artist);
+          }
+        });
       }
 
       @Override public void failure(RetrofitError retrofitError) {

@@ -12,7 +12,7 @@ import indexer.com.portfolio.R;
 
 public class ArtistListRowHolder extends RecyclerView.ViewHolder {
   protected ImageView thumbnail;
-  protected TextView title;
+  public TextView title;
 
   public ArtistListRowHolder(View view) {
     super(view);

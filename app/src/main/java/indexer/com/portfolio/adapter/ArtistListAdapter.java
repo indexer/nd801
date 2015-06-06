@@ -34,8 +34,8 @@ public class ArtistListAdapter extends RecyclerView.Adapter<ArtistListRowHolder>
     return mh;
   }
 
-  @Override public void onBindViewHolder(ArtistListRowHolder feedListRowHolder, int i) {
-
+  @Override public void onBindViewHolder(ArtistListRowHolder artistListRowHolder, int i) {
+    artistListRowHolder.title.setText(artistItemList.get(i));
   }
 
   @Override public int getItemCount() {
