@@ -1,4 +1,4 @@
-package indexer.com.portfolio;
+package indexer.com.portfolio.acitvities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import indexer.com.portfolio.R;
 import kaaes.spotify.webapi.android.SpotifyApi;
 import kaaes.spotify.webapi.android.SpotifyService;
 import kaaes.spotify.webapi.android.models.Album;
@@ -68,10 +69,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
   public void getArtistAlbums() {
     SpotifyApi api = new SpotifyApi();
-
     // Most (but not all) of the Spotify Web API endpoints require authorisation.
     // If you know you'll only use the ones that don't require authorisation you can skip this step
-    api.setAccessToken(getResources().getString(R.string.spotify_api));
     SpotifyService spotify = api.getService();
     spotify.getArtistAlbums("0TnOYISbd1XYRBk9myaseg", new Callback<Pager<Album>>() {
       @Override public void success(Pager<Album> albumPager, Response response) {

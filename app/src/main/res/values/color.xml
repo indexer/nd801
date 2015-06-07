@@ -2,4 +2,6 @@
 <resources>
   <color name="orange">#F08C35</color>
   <color name="red">#ff0f43</color>
+  <color name="tagBorderDefault">#000000</color>
+  <color name="tagBackgroundDefault">#ffffff</color>
 </resources>
